@@ -9,9 +9,11 @@
   "license": "",
   "author": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "webpack --config webpack.config.prod.js --mode=development --json > /dev/null",
     "start": "webpack serve --open --config webpack.config.dev.js",
-    "build": "webpack --config webpack.config.prod.js"
+    "build": "webpack --config webpack.config.prod.js",
+    "verify-build": "node -e \"const fs=require('fs'); const path=require('path'); const dist=path.join(__dirname,'dist'); if(!fs.existsSync(dist) || fs.readdirSync(dist).length === 0) { console.error('Build output is empty or does not exist'); process.exit(1); } else { console.log('Build output verified successfully'); }\"",
+    "full-test": "npm run build && npm run verify-build"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^11.0.0",
