@@ -77,7 +77,7 @@ document
             <h3>${
       missingValue.charAt(0).toUpperCase() + missingValue.slice(1)
     }:</h3>
-            <p>${result.toFixed(8)} ${getUnits(missingValue)}</p>
+            <p>${result.toFixed(3)} ${getUnits(missingValue)}</p>
         `;
   });
 
@@ -113,6 +113,6 @@ document
             <h3>${
             missingValue.charAt(0).toUpperCase() + missingValue.slice(1)
         }:</h3>
-            <p>${result.toFixed(8)} ${getUnits(missingValue)}</p>
+            <p>${result.toFixed(3)} ${getUnits(missingValue)}</p>
         `;
     });
