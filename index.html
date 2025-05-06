@@ -49,7 +49,6 @@
         This calculator can help you find the missing value between frequency,
         wavelength, and speed of light.
       </p>
-      <p style="font-size: large">DON'T ADD A UNIT TO THE END OF THE</p>
       <form id="wfsForm">
         <label for="wavelengthForm">Enter WaveLength:</label>
         <input id="wavelength" placeholder="Example: 500" type="text"/>
@@ -60,6 +59,26 @@
         <button type="submit">Calculate Missing Value</button>
       </form>
       <div id="wfsResult"></div>
+    </div>
+
+    <!-- Frequency and Photon Energy Calculator -->
+    <div class="container">
+        <h1>Frequency and Photon Energy Calculator</h1>
+        <p>
+            This calculator can help you find the missing value between frequency,
+            photon energy, and Planck's constant.
+        </p>
+        <p>Use this character for the minus symbol: −</p>
+        <form id="fphForm">
+            <label for="ffrequencyForm">Enter Frequency:</label>
+            <input id="ffrequency" placeholder="Example: 500" type="text"/>
+            <label for="photonenergyForm">Enter Photon Energy:</label>
+            <input id="photonenergy" placeholder="Example: 4.108e−31" type="text"/>
+            <label for="plancksconstantForm">Enter Planck's Constant:</label>
+            <input id="plancksConstant" placeholder="Example: 6.626e−34" type="text" value="6.62607015e−34"/>
+            <button type="submit">Calculate Missing Value</button>
+        </form>
+        <div id="fphResult"></div>
     </div>
     <script src="js/app.js"></script>
   </body>

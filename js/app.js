@@ -30,6 +30,10 @@ function getUnits(variable) {
       return "Hz";
     case "speedOfLight":
       return "m/s";
+      case "planckConstant":
+          return "J*s";
+      case "photonenergy":
+          return "J";
     default:
       return "";
   }
@@ -73,6 +77,42 @@ document
             <h3>${
       missingValue.charAt(0).toUpperCase() + missingValue.slice(1)
     }:</h3>
-            <p>${result.toFixed(2)} ${getUnits(missingValue)}</p>
+            <p>${result.toFixed(8)} ${getUnits(missingValue)}</p>
         `;
   });
+
+document
+    // Get values from input fields
+    .getElementById("fphForm")
+    .addEventListener("submit", function (e) {
+        e.preventDefault();
+        const plancksConstant = parseFloat(
+            document.getElementById("plancksConstant").value
+        );
+        const ffrequency = parseFloat(document.getElementById("ffrequency").value);
+        const photonenergy = parseFloat(document.getElementById("photonenergy").value);
+        let result = "";
+        // Calculate missing value
+        var missingValue = "";
+        if (!isNaN(photonenergy) && !isNaN(plancksConstant)) {
+            missingValue = "ffrequency";
+            result = photonenergy / plancksConstant;
+        } else if (!isNaN(plancksConstant) && !isNaN(ffrequency)) {
+            missingValue = "photonenergy";
+            result = plancksConstant * ffrequency;
+        } else if (!isNaN(ffrequency) && !isNaN(photonenergy)) {
+            missingValue = "plancksConstant";
+            result = ffrequency * photonenergy;
+        } else {
+            document.getElementById("fphResult").innerHTML =
+                "<p class='error'>Please enter two values.</p>";
+            return;
+        }
+        // Display result
+        document.getElementById("fphResult").innerHTML = `
+            <h3>${
+            missingValue.charAt(0).toUpperCase() + missingValue.slice(1)
+        }:</h3>
+            <p>${result.toFixed(8)} ${getUnits(missingValue)}</p>
+        `;
+    });
