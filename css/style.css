@@ -11,10 +11,18 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
-html {
+html,
+body {
+    height: 100%;
   color: #222;
   font-size: 1em;
   line-height: 1.4;
+}
+
+body {
+    background: url('../img/bg.png') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
 }
 
 /*
@@ -119,6 +127,11 @@ button:hover {
 
 .error {
   color: #dc3545;
+}
+
+/* Text color for light text on dark backgrounds */
+.text-light {
+    color: white;
 }
 
 /* ==========================================================================
@@ -281,4 +294,3 @@ button:hover {
     page-break-after: avoid;
   }
 }
-

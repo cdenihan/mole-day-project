@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title></title>
+      <title>Chemistry Calculators - Mole Day Project</title>
     <link rel="stylesheet" href="css/style.css" />
-    <meta name="description" content="" />
+      <meta content="Chemistry calculators for balancing equations, calculating wavelength, frequency, and mole relationships"
+            name="description"/>
 
-    <meta property="og:title" content="" />
-    <meta property="og:type" content="" />
+      <meta content="Chemistry Calculators" property="og:title"/>
+      <meta content="website" property="og:type"/>
     <meta property="og:url" content="" />
     <meta property="og:image" content="" />
     <meta property="og:image:alt" content="" />
@@ -24,13 +25,13 @@
   <body>
     <!-- Chemical Equation Balancer -->
     <div class="container">
-      <h1>Chemical Equation Balancer</h1>
-      <p>
+        <h1 class="text-light">Chemical Equation Balancer</h1>
+        <p class="text-light">
         This calculator can help you balance chemical equations. Enter the
         equation in the format: "Fe + H2O = Fe3O4 + H2".
       </p>
       <form id="equationForm">
-        <label for="equation">Enter Chemical Equation:</label>
+          <label class="text-light" for="equation">Enter Chemical Equation:</label>
         <input
           type="text"
           id="equation"
@@ -39,46 +40,64 @@
         />
         <button type="submit">Balance Equation</button>
       </form>
-      <div id="result"></div>
+        <div class="text-light" id="result"></div>
     </div>
 
     <!-- Frequency and Wavelength Calculator -->
     <div class="container">
-      <h1>Frequency and Wavelength Calculator</h1>
-      <p>
+        <h1 class="text-light">Frequency and Wavelength Calculator</h1>
+        <p class="text-light">
         This calculator can help you find the missing value between frequency,
         wavelength, and speed of light.
       </p>
       <form id="wfsForm">
-        <label for="wavelengthForm">Enter WaveLength:</label>
+          <label class="text-light" for="wavelength">Enter Wavelength:</label>
         <input id="wavelength" placeholder="Example: 500" type="text"/>
-        <label for="frequencyForm">Enter Frequency:</label>
+          <label class="text-light" for="frequency">Enter Frequency:</label>
         <input id="frequency" placeholder="Example: 5.0e14" type="text"/>
-        <label for="variableForm">Enter Speed of Light:</label>
+          <label class="text-light" for="speedOfLight">Enter Speed of Light:</label>
           <input id="speedOfLight" placeholder="Example: 2.997e8" type="text" value="2.997e8"/>
         <button type="submit">Calculate Missing Value</button>
       </form>
-      <div id="wfsResult"></div>
+        <div class="text-light" id="wfsResult"></div>
     </div>
 
     <!-- Frequency and Photon Energy Calculator -->
     <div class="container">
-        <h1>Frequency and Photon Energy Calculator</h1>
-        <p>
+        <h1 class="text-light">Frequency and Photon Energy Calculator</h1>
+        <p class="text-light">
             This calculator can help you find the missing value between frequency,
             photon energy, and Planck's constant.
         </p>
-        <p>Use this character for the minus symbol: −</p>
+        <p class="text-light">Use this character for the minus symbol: −</p>
         <form id="fphForm">
-            <label for="ffrequencyForm">Enter Frequency:</label>
+            <label class="text-light" for="ffrequency">Enter Frequency:</label>
             <input id="ffrequency" placeholder="Example: 500" type="text"/>
-            <label for="photonenergyForm">Enter Photon Energy:</label>
+            <label class="text-light" for="photonenergy">Enter Photon Energy:</label>
             <input id="photonenergy" placeholder="Example: 4.108e−31" type="text"/>
-            <label for="plancksconstantForm">Enter Planck's Constant:</label>
+            <label class="text-light" for="plancksConstant">Enter Planck's Constant:</label>
             <input id="plancksConstant" placeholder="Example: 6.626e−34" type="text" value="6.626e−34"/>
             <button type="submit">Calculate Missing Value</button>
         </form>
-        <div id="fphResult"></div>
+        <div class="text-light" id="fphResult"></div>
+    </div>
+
+    <!-- Mole Calculator -->
+    <div class="container">
+        <h1 class="text-light">Mole Calculator</h1>
+        <p class="text-light">
+            This calculator can help you find the missing value between mass, molecular weight, and moles.
+        </p>
+        <form id="mmmForm">
+            <label class="text-light" for="mass">Enter Mass (g):</label>
+            <input id="mass" placeholder="Example: 500" type="text"/>
+            <label class="text-light" for="molem">Enter Molecular Weight:</label>
+            <input id="molem" placeholder="Example: 5" type="text"/>
+            <label class="text-light" for="moles">Enter Moles:</label>
+            <input id="moles" placeholder="Example: 2" type="text"/>
+            <button type="submit">Calculate Missing Value</button>
+        </form>
+        <div class="text-light" id="mmmResult"></div>
     </div>
     <script src="js/app.js"></script>
   </body>
