@@ -17,6 +17,7 @@ body {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
+    font-family: "ABeeZee", sans-serif;
 }
 
 body {
@@ -326,4 +327,17 @@ button:active {
   h3 {
     page-break-after: avoid;
   }
+}
+
+/* Custom Font */
+.abeezee-regular {
+    font-family: "ABeeZee", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.abeezee-regular-italic {
+    font-family: "ABeeZee", sans-serif;
+    font-weight: 400;
+    font-style: italic;
 }
