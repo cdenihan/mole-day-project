@@ -1,121 +1,116 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <title>Chemistry Calculators - Mole Day Project</title>
-    <link rel="stylesheet" href="css/style.css" />
-      <meta content="Chemistry calculators for balancing equations, calculating wavelength, frequency, and mole relationships"
-            name="description"/>
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title>Chemistry Calculators - Mole Day Project</title>
+    <link href="css/style.css" rel="stylesheet"/>
+    <meta
+        content="Chemistry calculators for balancing equations, calculating wavelength, frequency, and mole relationships"
+        name="description"/>
 
-      <meta content="Chemistry Calculators" property="og:title"/>
-      <meta content="website" property="og:type"/>
-    <meta property="og:url" content="" />
-    <meta property="og:image" content="" />
-    <meta property="og:image:alt" content="" />
+    <meta content="Chemistry Calculators" property="og:title"/>
+    <meta content="website" property="og:type"/>
+    <meta content="" property="og:url"/>
+    <meta content="" property="og:image"/>
+    <meta content="" property="og:image:alt"/>
 
-    <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="icon.png" />
+    <link href="/favicon.ico" rel="icon" sizes="any"/>
+    <link href="/icon.svg" rel="icon" type="image/svg+xml"/>
+    <link href="icon.png" rel="apple-touch-icon"/>
 
-    <link rel="manifest" href="site.webmanifest" />
-    <meta name="theme-color" content="#fafafa" />
-      <!-- Google Fonts -->
-      <link href="https://fonts.googleapis.com" rel="preconnect">
-      <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
-      <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap" rel="stylesheet">
-  </head>
+    <link href="site.webmanifest" rel="manifest"/>
+    <meta content="#fafafa" name="theme-color"/>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap" rel="stylesheet">
+</head>
 
-  <body>
-    <!-- Chemical Equation Balancer -->
-    <div class="container">
-        <h1 class="text-light">Chemical Equation Balancer</h1>
-        <p class="text-light">
-        This calculator can help you balance chemical equations. Enter the
+<body>
+<!-- Chemical Equation Balancer -->
+<div class="container">
+    <h1 class="text-light">Chemical Equation Balancer</h1>
+    <p class="text-light">
+        This calculator can help you balance chemical equations.
+        Enter the
         equation in the format: "Fe + H2O = Fe3O4 + H2".
-      </p>
-      <form id="equationForm">
-          <label class="text-light" for="equation">Enter Chemical Equation:</label>
+    </p>
+    <form id="equationForm">
+        <label class="text-light" for="equation">Enter Chemical Equation:</label>
         <input
-          type="text"
-          id="equation"
-          placeholder="Example: Fe + H2O = Fe3O4 + H2"
-          required
+            id="equation"
+            placeholder="Example: Fe + H2O = Fe3O4 + H2"
+            required
+            type="text"
         />
         <button type="submit">Balance Equation</button>
-      </form>
-        <div class="text-light" id="result"></div>
-    </div>
+    </form>
+    <div class="text-light" id="result"></div>
+</div>
 
-    <!-- Frequency and Wavelength Calculator -->
-    <div class="container">
-        <h1 class="text-light">Frequency and Wavelength Calculator</h1>
-        <p class="text-light">
+<!-- Frequency and Wavelength Calculator -->
+<div class="container">
+    <h1 class="text-light">Frequency and Wavelength Calculator</h1>
+    <p class="text-light">
         This calculator can help you find the missing value between frequency,
         wavelength, and speed of light.
-      </p>
-      <form id="wfsForm">
-          <label class="text-light" for="wavelength">Enter Wavelength:</label>
+    </p>
+    <form id="wfsForm">
+        <label class="text-light" for="wavelength">Enter Wavelength:</label>
         <input id="wavelength" placeholder="Example: 500" type="text"/>
-          <label class="text-light" for="frequency">Enter Frequency:</label>
+        <label class="text-light" for="frequency">Enter Frequency:</label>
         <input id="frequency" placeholder="Example: 5.0e14" type="text"/>
-          <label class="text-light" for="speedOfLight">Enter Speed of Light:</label>
-          <input id="speedOfLight" placeholder="Example: 2.997e8" type="text" value="2.997e8"/>
+        <label class="text-light" for="speedOfLight">Enter Speed of Light:</label>
+        <input id="speedOfLight" placeholder="Example: 2.997e8" type="text" value="2.997e8"/>
         <button type="submit">Calculate Missing Value</button>
-      </form>
-        <div class="text-light" id="wfsResult"></div>
-    </div>
+    </form>
+    <div class="text-light" id="wfsResult"></div>
+</div>
 
-    <!-- Frequency and Photon Energy Calculator -->
-    <div class="container">
-        <h1 class="text-light">Frequency and Photon Energy Calculator</h1>
-        <p class="text-light">
-            This calculator can help you find the missing value between frequency,
-            photon energy, and Planck's constant.
-        </p>
-        <p class="text-light">Use this character for the minus symbol: −</p>
-        <form id="fphForm">
-            <label class="text-light" for="ffrequency">Enter Frequency:</label>
-            <input id="ffrequency" placeholder="Example: 500" type="text"/>
-            <label class="text-light" for="photonenergy">Enter Photon Energy:</label>
-            <input id="photonenergy" placeholder="Example: 4.108e−31" type="text"/>
-            <label class="text-light" for="plancksConstant">Enter Planck's Constant:</label>
-            <input id="plancksConstant" placeholder="Example: 6.626e−34" type="text" value="6.626e−34"/>
-            <button type="submit">Calculate Missing Value</button>
-        </form>
-        <div class="text-light" id="fphResult"></div>
-    </div>
+<!-- Frequency and Photon Energy Calculator -->
+<div class="container">
+    <h1 class="text-light">Frequency and Photon Energy Calculator</h1>
+    <p class="text-light">
+        This calculator can help you find the missing value between frequency,
+        photon energy, and Planck's constant.
+    </p>
+    <p class="text-light">Use this character for the minus symbol: −</p>
+    <form id="fphForm">
+        <label class="text-light" for="ffrequency">Enter Frequency:</label>
+        <input id="ffrequency" placeholder="Example: 500" type="text"/>
+        <label class="text-light" for="photonenergy">Enter Photon Energy:</label>
+        <input id="photonenergy" placeholder="Example: 4.108e−31" type="text"/>
+        <label class="text-light" for="plancksConstant">Enter Planck's Constant:</label>
+        <input id="plancksConstant" placeholder="Example: 6.626e−34" type="text" value="6.626e−34"/>
+        <button type="submit">Calculate Missing Value</button>
+    </form>
+    <div class="text-light" id="fphResult"></div>
+</div>
 
-    <!-- Mole Calculator -->
-    <div class="container">
-        <h1 class="text-light">Mole Calculator</h1>
-        <p class="text-light">
-            This calculator can help you find the missing value between mass, molecular weight, and moles.
-        </p>
-        <form id="mmmForm">
-            <label class="text-light" for="mass">Enter Mass (g):</label>
-            <input id="mass" placeholder="Example: 500" type="text"/>
-            <label class="text-light" for="molem">Enter Molecular Weight:</label>
-            <input id="molem" placeholder="Example: 5" type="text"/>
-            <label class="text-light" for="moles">Enter Moles:</label>
-            <input id="moles" placeholder="Example: 2" type="text"/>
-            <button type="submit">Calculate Missing Value</button>
-        </form>
-        <div class="text-light" id="mmmResult"></div>
-    </div>
+<!-- Mole Calculator -->
+<div class="container">
+    <h1 class="text-light">Mole Calculator</h1>
+    <p class="text-light">
+        This calculator can help you find the missing value between mass, molecular weight, and moles.
+    </p>
+    <form id="mmmForm">
+        <label class="text-light" for="mass">Enter Mass (g):</label>
+        <input id="mass" placeholder="Example: 500" type="text"/>
+        <label class="text-light" for="molem">Enter Molecular Weight:</label>
+        <input id="molem" placeholder="Example: 5" type="text"/>
+        <label class="text-light" for="moles">Enter Moles:</label>
+        <input id="moles" placeholder="Example: 2" type="text"/>
+        <button type="submit">Calculate Missing Value</button>
+    </form>
+    <div class="text-light" id="mmmResult"></div>
+</div>
 
-    <div id="contentstuff">
-
-
-
-    <div class="container">
-        <h1 class="text-light">References:</h1>
-        <p class="text-light">Website background was made with Canva Education Plan</p>
-    </div>
+<div class="container" id="centerme" style="margin: 0 auto; max-width: 800px;">
 
     <!-- Mole Facts! -->
-    <div class="container">
-        <h1 class="text-light">Mole Facts</h1>
+    <h1 class="text-light">Mole Facts</h1>
+    <div class="container" id="youcanreadme">
         <ul>
             <li class="text-light">Created By: Amedeo Avogadro in 1776</li>
             <li class="text-light">1 mole = 6.022140857e23 grams</li>
@@ -123,8 +118,8 @@
     </div>
 
     <!-- Mole Jokes -->
-    <div class="container">
-        <h1 class="text-light">Mole Jokes</h1>
+    <h1 class="text-light">Mole Jokes</h1>
+    <div class="container" id="youcanreadme">
 
         <p class="text-light">Q: What did Avogadro teach his students in math class?</p>
         <p class="text-light">A: Mole-tiplication</p>
@@ -148,16 +143,22 @@
     </div>
 
     <!-- References -->
-    <div class="container">
-        <h1 class="text-light">References</h1>
+    <h1 class="text-light">References</h1>
+    <div class="container" id="youcanreadme">
+
         <h4 class="text-light">All Jokes Found At The Following Website:</h4>
-        <p class="text-light">Helmenstine, Ph. D. A. (2024, October 11). Funny mole day jokes and humor. ThoughtCo.
+        <p class="text-light">Helmenstine, Ph. D. A. (2024, October 11).
+            Funny mole day jokes and humor.
+            ThoughtCo.
             https://www.thoughtco.com/funny-mole-day-jokes-and-humor-608525 </p>
-    </div>
+
+        <h4 class="text-light">Website background was made with Canva Education Plan:</h4>
 
     </div>
 
-    <br> <!-- Make padding on bottom of page -->
-    <script src="js/app.js"></script>
-  </body>
+</div>
+
+<br> <!-- Make padding on bottom of page -->
+<script src="js/app.js"></script>
+</body>
 </html>
